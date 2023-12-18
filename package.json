@@ -11,6 +11,7 @@
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.3",
+    "sass": "^1.69.5",
     "vite": "^5.0.0"
   }
 }
