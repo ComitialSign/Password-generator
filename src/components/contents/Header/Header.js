@@ -6,7 +6,7 @@ export function Header(title) {
 
     const titleElement = document.createElement('h1');
     titleElement.textContent = title;
-    titleElement.classList.add(style.title);
+    titleElement.classList.add(style['header-title']);
 
     header.appendChild(titleElement);
 

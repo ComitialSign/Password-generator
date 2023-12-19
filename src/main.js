@@ -1,9 +1,5 @@
 import './style.scss'
-import {Header} from './components/contents/Header/Header';
+import { MainPage } from './components/pages/MainPage'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-  ${Header('Bolo').outerHTML}
-  </div>
-`
+document.querySelector('#app').appendChild(MainPage());
 
