@@ -1,5 +1,5 @@
 export function Slider(value, className, onchange) {
-    const container = document.createElement('div');
+    const fragment = document.createDocumentFragment();
 
     const sliderElement = document.createElement('input');
     sliderElement.type = 'range';
@@ -9,7 +9,7 @@ export function Slider(value, className, onchange) {
     sliderElement.className = className;
     sliderElement.addEventListener('change', onchange);
 
-    container.appendChild(sliderElement);
+    fragment.appendChild(sliderElement);
 
-    return container;
+    return fragment;
 }

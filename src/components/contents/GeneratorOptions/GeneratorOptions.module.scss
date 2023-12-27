@@ -1,6 +1,44 @@
-.div {
-    height: 300px;
+.container {
+    height: auto;
     width: 80%;
+    padding: 20px 20px 0 20px;
     background-color: #303030;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.div-checkbox {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.checkbox{
+    height: 15px;
+    width: 15px;
+}
+
+.div-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+}
+
+.div-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 5px;
+    border-radius: 5px;
 }

@@ -1,2 +1,4 @@
-import style from './Generator.module.scss';
+export function generate() {
+    
+}
 
