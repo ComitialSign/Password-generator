@@ -1,5 +1,8 @@
-export function Slider(value, className, onchange) {
+export function Slider(label, value, className) {
     const fragment = document.createDocumentFragment();
+
+    const sliderLabel = document.createElement('p');
+    sliderLabel.textContent = label;
 
     const sliderElement = document.createElement('input');
     sliderElement.type = 'range';
@@ -7,9 +10,17 @@ export function Slider(value, className, onchange) {
     sliderElement.max = '100';
     sliderElement.value = value;
     sliderElement.className = className;
-    sliderElement.addEventListener('change', onchange);
 
+    const sliderValue = document.createElement('span');
+    sliderValue.textContent = value;
+  
+    sliderElement.addEventListener('input', () => {
+        sliderValue.textContent = sliderElement.value;
+    });
+
+    fragment.appendChild(sliderLabel);
     fragment.appendChild(sliderElement);
+    fragment.appendChild(sliderValue);
 
     return fragment;
 }

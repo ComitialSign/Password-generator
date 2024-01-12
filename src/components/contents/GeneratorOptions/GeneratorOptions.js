@@ -28,10 +28,12 @@ export function GeneratorOptions() {
     divCheckbox.appendChild(numberCheckbox);
     const symbolCheckbox = Checkbox('Symbol', 'symbol', style.checkbox, );
     divCheckbox.appendChild(symbolCheckbox);
+    const uppercaseCheckbox = Checkbox('Uppercase', 'uppercase', style.checkbox, );
+    divCheckbox.appendChild(uppercaseCheckbox);
 
-    const sliderElement = Slider(10, style.slider,);
+    const sliderElement = Slider('Length:',8, style.slider);
     divSlider.appendChild(sliderElement);
-
+    
     const buttonElement = Button('generate', style.button, );
     divButton.appendChild(buttonElement);
 

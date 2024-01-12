@@ -9,6 +9,6 @@ export function MainPage() {
 
     const generatorContentElement = GeneratorContent();
     fragment.appendChild(generatorContentElement);
-
+    
     return fragment;
 }
