@@ -2,10 +2,13 @@ import style from './GeneratorOptions.module.scss';
 import { Button } from '../reusables/Button/Button';
 import { Checkbox } from '../reusables/Checkbox/Checkbox'
 import { Slider } from '../reusables/Slider/Slider'
+import { runGenerate, copyText } from '../Generator/Generator';
+
+
 
 export function GeneratorOptions() {
 
-    //div's
+    //divs
 
     const generatorOptionsElement = document.createElement('div');
     generatorOptionsElement.classList.add(style.container);
@@ -24,18 +27,26 @@ export function GeneratorOptions() {
 
     //elements
 
-    const numberCheckbox = Checkbox('Number', 'number', style.checkbox, );
+    //checkbox
+    const numberCheckbox = Checkbox('Number', 'number', style.checkbox, false, 'number');
     divCheckbox.appendChild(numberCheckbox);
-    const symbolCheckbox = Checkbox('Symbol', 'symbol', style.checkbox, );
+
+    const symbolCheckbox = Checkbox('Symbol', 'symbol', style.checkbox, false, 'symbol');
     divCheckbox.appendChild(symbolCheckbox);
-    const uppercaseCheckbox = Checkbox('Uppercase', 'uppercase', style.checkbox, );
+
+    const uppercaseCheckbox = Checkbox('Uppercase', 'uppercase', style.checkbox, false, 'uppercase');
     divCheckbox.appendChild(uppercaseCheckbox);
 
+    //slider
     const sliderElement = Slider('Length:',8, style.slider);
     divSlider.appendChild(sliderElement);
     
-    const buttonElement = Button('generate', style.button, );
-    divButton.appendChild(buttonElement);
+    //btn
+    const btngenerate = Button('generate', style.button, runGenerate);
+    divButton.appendChild(btngenerate);
+
+    const btnCopy = Button('copy', style.button, copyText);
+    divButton.appendChild(btnCopy);
 
     return generatorOptionsElement;
 }

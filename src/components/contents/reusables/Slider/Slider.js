@@ -10,10 +10,11 @@ export function Slider(label, value, className) {
     sliderElement.max = '100';
     sliderElement.value = value;
     sliderElement.className = className;
+    sliderElement.id = 'rangeSlider';
 
     const sliderValue = document.createElement('span');
     sliderValue.textContent = value;
-  
+
     sliderElement.addEventListener('input', () => {
         sliderValue.textContent = sliderElement.value;
     });
@@ -21,6 +22,6 @@ export function Slider(label, value, className) {
     fragment.appendChild(sliderLabel);
     fragment.appendChild(sliderElement);
     fragment.appendChild(sliderValue);
-
+    
     return fragment;
 }
