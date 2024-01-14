@@ -5,28 +5,28 @@ export function calculateLength() {
 }
 
 export function generate(useSymbol, useNumber, useUppercase) {
-    const lengthValue = calculateLength();
+    let lengthValue = calculateLength();
     let characters = 'abcdefghijklmnopqrstuvwxyz';
     let result = '';
 
     if (useNumber) {
         const randomDigit = Math.floor(Math.random() * 10);
         result += randomDigit.toString();
-        length--; 
+        lengthValue--; 
         characters += '0123456789';
     }
 
     if (useSymbol) {
         const randomSymbol = '!@#$%^&*()_+[]{}|;:,.<>?';
         result += randomSymbol.charAt(Math.floor(Math.random() * randomSymbol.length));
-        length--; 
+        lengthValue--; 
         characters += randomSymbol;
     }
 
     if (useUppercase) {
         const randomUppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         result += randomUppercase.charAt(Math.floor(Math.random() * randomUppercase.length));
-        length--;
+        lengthValue--;
         characters += randomUppercase;
     }
 
